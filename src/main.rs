@@ -89,5 +89,8 @@ fn gen_morse() -> HashMap<&'static str, char>{
 
 fn main() {
     let morse_table = gen_morse();
-    
+    let mut hellified: HashMap<char, &str> = HashMap::new();
+    for (key, value) in morse_table {
+        hellified.insert(value, key);
+    }
 }
